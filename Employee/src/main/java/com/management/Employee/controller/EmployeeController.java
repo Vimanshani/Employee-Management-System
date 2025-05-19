@@ -4,14 +4,13 @@ import com.management.Employee.entity.Employee;
 import com.management.Employee.service.EmployeeService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-
+@CrossOrigin("*")
 
 public class EmployeeController {
 
@@ -26,4 +25,10 @@ public class EmployeeController {
     public Employee postEmployee(@RequestBody Employee employee){
         return employeeService.postEmployee(employee);
     }
+
+    @GetMapping("/employees")
+    public List<Employee> getAllEmployees(){
+        return employeeService.getAllEmployees();
+    }
+
 }
