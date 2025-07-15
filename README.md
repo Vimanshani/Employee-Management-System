@@ -20,11 +20,8 @@
 
 ## 📑 Prerequisites
 ### Make sure you have the following installed:
-
 ###  Node.js & npm
-
 ###  Java JDK 11+
-
 ###  MySQL
 
 #### ✅ Note: This project was generated using Spring Initializr, so it includes the Maven wrapper (mvnw). You don’t need to install Maven separately.
